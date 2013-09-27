@@ -41,6 +41,21 @@ rackup private_pub.ru -s thin -E production
 It's not necessary to include faye.js since that will be handled automatically for you.
 
 
+## Serving Faye with Redis engine
+
+To serve Faye with Redis engine, you should create `config/private_pub_redis.yml`
+
+```yaml
+production:
+  host: redis_host
+  port: redis_port
+  password: redis_password
+  database: redis_database
+  namespace: '/namespace'
+```
+
+Note: database and namespace are optional.
+
 ## Usage
 
 Use the `subscribe_to` helper method on any page to subscribe to a channel.
