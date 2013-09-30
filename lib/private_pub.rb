@@ -1,4 +1,5 @@
 require "digest/sha1"
+require "faye/redis"
 require "net/http"
 require "net/https"
 require "yajl/json_gem"
